@@ -15,7 +15,7 @@
         </p>
       </div>
       <div class="search md:w-[650px]">
-        <div class="bg-white p-5 rounded-lg">
+        <div class="bg-white p-5 rounded-[20px]">
           <div class="flex flex-wrap items-center gap-x-3">
             <div class="flex-1 w-full md:w-auto">
               <div class="relative">

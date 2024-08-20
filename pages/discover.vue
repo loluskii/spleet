@@ -2,7 +2,7 @@
   <div class="main-content">
     <Hero
       :backgroundImage="'/hero-img.jpeg'"
-      :heroText="`Ready to Rock? Discover the Hottest Events Here - Your Calendar's New Best Friend!`"
+      heroText="Ready to Rock? Discover the Hottest Events Here - Your Calendar's New Best Friend!"
     />
     <section class="md:p-16 px-8 py-14">
       <div class="header-content flex justify-between items-center mb-8">
@@ -10,8 +10,11 @@
       </div>
       <div class="events">
         <div class="grid md:grid-cols-3 grid-cols-1 gap-6 mb-8">
-          <template v-if="events.length">
+          <template v-if="events.length && !isLoading">
             <Event v-for="event in events" :key="event.id" :event="event" />
+          </template>
+          <template v-else-if="isLoading">
+            <Skeleton v-for="i in 3" :key="i" />
           </template>
           <NoData v-else />
         </div>
@@ -41,10 +44,11 @@
 import Event from "~/components/Event.vue";
 import NoData from "~/components/NoData.vue";
 import Hero from "~/components/Hero.vue";
+import Skeleton from "~/components/Skeleton.vue";
 export default {
   name: "discover-events",
   layout: "default",
-  components: { Event, NoData, Hero },
+  components: { Event, NoData, Hero, Skeleton },
   data() {
     return {
       events: [],

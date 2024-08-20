@@ -1,7 +1,7 @@
 <template>
-  <div class="main-content md:p-16 px-8 pt-[145px]">
+  <div class="main-content md:px-16 px-8 pt-[145px]">
     <div
-      class="event-image h-[480px] w-full bg-slate-300 rounded-xl"
+      class="event-image h-[480px] w-full bg-slate-300 rounded-xl mb-12"
       :style="{
         backgroundImage: `url(${eventData?.imageUrl})`,
         backgroundSize: 'cover',
@@ -9,7 +9,7 @@
         backgroundPosition: 'center',
       }"
     ></div>
-    <div class="event-details mt-12">
+    <div class="event-details mb-12" v-show="eventData">
       <div class="flex md:flex-row flex-col gap-x-7">
         <div class="md:basis-3/5 basis-full">
           <h3 class="text-2xl font-bold mb-4">
@@ -79,7 +79,7 @@
                   class="cursor-pointer"
                 >
                   <div
-                    class="flex items-center justify-center bg-primary text-white rounded-full w-8 h-8"
+                    class="flex items-center justify-center bg-[#783EAD] text-white rounded-full w-8 h-8"
                   >
                     <i class="bi bi-envelope-fill text-lg"></i>
                   </div>
@@ -90,7 +90,7 @@
                   class="cursor-pointer"
                 >
                   <div
-                    class="flex items-center justify-center bg-primary text-white rounded-lg w-8 h-8"
+                    class="flex items-center justify-center bg-[#783EAD] text-white rounded-lg w-8 h-8"
                   >
                     <i class="bi bi-instagram text-lg"></i>
                   </div>
@@ -101,7 +101,7 @@
                   class="cursor-pointer"
                 >
                   <div
-                    class="flex items-center justify-center bg-primary text-white rounded-lg w-8 h-8"
+                    class="flex items-center justify-center bg-[#783EAD] text-white rounded-lg w-8 h-8"
                   >
                     <i class="bi bi-twitter text-lg"></i>
                   </div>

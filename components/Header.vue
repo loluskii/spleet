@@ -1,7 +1,7 @@
 <template>
   <div class="flex w-full h-full justify-center">
     <header
-      class="absolute top-[40px] z-50 bg-white bg-opacity-[0.6] rounded-[20px] md:w-[calc(100%-128px)] mx-auto w-[calc(100%-56px)] border"
+      class="absolute top-[40px] z-50 bg-white bg-opacity-[0.6] rounded-[20px] md:w-[calc(100%-128px)] mx-auto w-[calc(100%-56px)]"
     >
       <div
         class="mx-auto px-6 py-5 sm:px-6 lg:px-8 max-w-7xl flex items-center justify-between gap-3"
