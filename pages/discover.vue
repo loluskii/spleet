@@ -1,26 +1,19 @@
 <template>
   <div class="main-content">
-    <section
-      class="hero-section bg-cover bg-center bg-no-repeat h-[85vh] flex md:px-16 md:py-28 px-8 py-14"
-      style="background-image: url('/hero-img.jpeg')"
-    >
-      <div class="content-end w-full">
-        <div class="text-container md:w-[500px] w-auto">
-          <p
-            class="text-white md:text-4xl text-2xl font-gilroy font-bold text-wrap"
-          >
-            Discover Events
-          </p>
-        </div>
-      </div>
-    </section>
+    <Hero
+      :backgroundImage="'/hero-img.jpeg'"
+      :heroText="`Ready to Rock? Discover the Hottest Events Here - Your Calendar's New Best Friend!`"
+    />
     <section class="md:p-16 px-8 py-14">
       <div class="header-content flex justify-between items-center mb-8">
         <div class="md:text-4xl text-2xl font-semibold">All Events</div>
       </div>
       <div class="events">
         <div class="grid md:grid-cols-3 grid-cols-1 gap-6 mb-8">
-          <Event v-for="event in events" :key="event.id" :event="event" />
+          <template v-if="events.length">
+            <Event v-for="event in events" :key="event.id" :event="event" />
+          </template>
+          <NoData v-else />
         </div>
 
         <div class="flex justify-center">
@@ -46,10 +39,12 @@
 
 <script>
 import Event from "~/components/Event.vue";
+import NoData from "~/components/NoData.vue";
+import Hero from "~/components/Hero.vue";
 export default {
-  name: "IndexPage",
+  name: "discover-events",
   layout: "default",
-  components: { Event },
+  components: { Event, NoData, Hero },
   data() {
     return {
       events: [],
