@@ -1,7 +1,7 @@
 <template>
   <div class="flex w-full h-full justify-center">
     <header
-      class="absolute top-[40px] z-50 bg-white bg-opacity-[0.6] rounded-[20px] md:w-[calc(100%-128px)] mx-auto w-[calc(100%-56px)] border"
+      class="absolute top-[40px] z-50 bg-white bg-opacity-[0.6] rounded-[20px] md:w-[calc(100%-128px)] mx-auto w-[calc(100%-56px)]"
     >
       <div
         class="mx-auto px-6 py-5 sm:px-6 lg:px-8 max-w-7xl flex items-center justify-between gap-3"
@@ -52,13 +52,13 @@
         <div class="flex items-center justify-end lg:flex-1 gap-1.5">
           <button
             type="button"
-            class="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-bold rounded text-sm gap-x-2 px-3 py-2 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 items-center hidden lg:flex text-primary"
+            class="focus:outline-none focus-visible:outline-0 flex-shrink-0 font-bold rounded text-sm gap-x-2 px-3 py-2 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 items-center hidden lg:flex text-primary"
           >
             <span>Log in</span>
           </button>
           <button
             type="button"
-            class="bg-[#783EAD] rounded-[10px] focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium text-sm gap-x-2 px-8 py-3 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 items-center hidden lg:flex text-white"
+            class="bg-[#783EAD] rounded-[10px] focus:outline-none focus-visible:outline-0 flex-shrink-0 font-medium text-sm gap-x-2 px-8 py-3 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 items-center hidden lg:flex text-white"
           >
             <span>Sign up</span>
           </button>

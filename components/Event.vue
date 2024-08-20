@@ -1,7 +1,7 @@
 <template>
   <div class="card bg-base-100 border border-[#E0E0E0] rounded-btn">
     <figure>
-      <img :src="event.imageUrl" alt="Shoes" />
+      <img :src="event.imageUrl" alt="Shoes" class="h-[240px] w-full object-cover" />
     </figure>
     <div class="card-body">
       <div class="title-card mb-4">
