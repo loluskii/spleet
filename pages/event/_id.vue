@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content px-16 pb-16 pt-[145px]">
+  <div class="main-content md:p-16 px-8 pt-[145px]">
     <div
       class="event-image h-[480px] w-full bg-slate-300 rounded-xl"
       :style="{
@@ -10,8 +10,8 @@
       }"
     ></div>
     <div class="event-details mt-12">
-      <div class="flex flex-row gap-x-7">
-        <div class="basis-3/5">
+      <div class="flex md:flex-row flex-col gap-x-7">
+        <div class="md:basis-3/5 basis-full">
           <h3 class="text-2xl font-bold mb-4">
             {{ eventData?.title }}
             <span
@@ -68,7 +68,7 @@
             </button>
           </div>
         </div>
-        <div class="basis-2/5">
+        <div class="md:basis-2/5 basis-full">
           <div class="event-contact mb-12">
             <h3 class="text-base font-bold mb-4">Contact Organizers</h3>
             <div class="social-media">
@@ -110,7 +110,7 @@
             </div>
           </div>
           <div class="event-map" v-if="eventData">
-            <h3 class="text-base font-bold mb-4">Contact Organizers</h3>
+            <h3 class="text-base font-bold mb-4">Location</h3>
             <gmap-map
               :zoom="14"
               :center="center"
