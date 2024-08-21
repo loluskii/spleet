@@ -1,13 +1,13 @@
 <template>
   <div class="main-content md:px-16 px-8 pt-[145px]">
     <div
-      class="event-image h-[480px] w-full bg-slate-300 rounded-xl mb-12"
-      :style="{
-        backgroundImage: `url(${eventData?.imageUrl})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }"
+      class="event-image h-[480px] w-full rounded-xl mb-12"
+      :class="eventData ? '' : 'skeleton'"
+      :style="
+        eventData
+          ? `background-image: url(${eventData?.imageUrl}); background-size: cover; background-repeat: no-repeat; background-position: center; `
+          : ''
+      "
     ></div>
     <div class="event-details mb-12" v-show="eventData">
       <div class="flex md:flex-row flex-col gap-x-7">
@@ -152,6 +152,7 @@ export default {
         this.center.lng = parseFloat(res.data.event.long);
       } catch (error) {
         console.error("Error fetching event:", error);
+        this.eventData = null;
       }
     },
     formatNumber(num) {
